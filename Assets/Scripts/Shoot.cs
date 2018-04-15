@@ -6,7 +6,6 @@ public class Shoot : MonoBehaviour {
 
 	public Rigidbody projectile;
 	public Transform spawn;
-	private float bulletSpeed = 5f;
 
 	// Use this for initialization
 	void Start () {
