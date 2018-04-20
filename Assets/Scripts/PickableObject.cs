@@ -6,6 +6,7 @@ public class PickableObject : MonoBehaviour {
 
 	public Transform TransformCamera;
 	public LayerMask RayMask;
+	public Transform hold;
 
 	private RaycastHit hit;
 	private Transform currentTransform;
@@ -13,7 +14,7 @@ public class PickableObject : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Mouse0)){
+		if(Input.GetKeyDown(KeyCode.Mouse1)){
 			if(Physics.Raycast(TransformCamera.position, TransformCamera.forward, out hit, 3f, RayMask)){
 				if(hit.transform.tag == "PickableObject"){
 					SetNewTransform (hit.transform);
@@ -21,7 +22,7 @@ public class PickableObject : MonoBehaviour {
 			}
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse1)){
+		if(Input.GetKeyUp(KeyCode.Mouse1)){
 			RemoveTransform ();
 		}
 
@@ -34,14 +35,15 @@ public class PickableObject : MonoBehaviour {
 		if(currentTransform){
 			return;
 		}
-
+		newTransform.position = hold.position;
 		currentTransform = newTransform;
-		lenght = Vector3.Distance (TransformCamera.position, newTransform.position);
+		//lenght = Vector3.Distance (TransformCamera.position, newTransform.position);
 		currentTransform.GetComponent<Rigidbody> ().isKinematic = true;
 	}
 
 	private void MoveTransformAround(){
-		currentTransform.position = TransformCamera.position + TransformCamera.forward * lenght;
+		//currentTransform.position = TransformCamera.position + TransformCamera.forward * lenght;
+		currentTransform.position = hold.position;
 	}
 
 	public void RemoveTransform(){

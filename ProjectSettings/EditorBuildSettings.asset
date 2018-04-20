@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Levels/Laser.unity
+    guid: 308da7bf53befc541abdf3fe4e4bd16e
+  - enabled: 1
+    path: Assets/Scenes/Levels/InvisibleFloor.unity
+    guid: 1af8660ac34aecd479cae7d3901ea0ff
