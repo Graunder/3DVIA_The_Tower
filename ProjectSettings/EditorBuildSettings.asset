@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Levels/PickUp.unity
+    guid: d1abd750210529641b916324d8fa1b7c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Shooting.unity
+    guid: 53f849e8978107042aaa51256d7aef87
+  - enabled: 1
     path: Assets/Scenes/Levels/Laser.unity
     guid: 308da7bf53befc541abdf3fe4e4bd16e
   - enabled: 1
     path: Assets/Scenes/Levels/InvisibleFloor.unity
     guid: 1af8660ac34aecd479cae7d3901ea0ff
+  - enabled: 1
+    path: Assets/Scenes/Levels/Final.unity
+    guid: 3bb8b94a571a0c34a97f99cd489900b0
